@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex-col">
+        <!-- Navigation Bar -->
+        <div class="nav flex-row">
+            <div class="nav-row flex-row">
+                <h1>Profile</h1>
+                <ul class="list">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/">My Profile</a>
+                    </li>
+                    <li>
+                        <a href="/">Find Connections</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="nav-button">Sign Out</button>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content flex-row">
+            <div class="left-col flex-col">
+                <!-- User Card -->
+                <div class="left-box">
+                    <div class="profile-header">
+                        <img class="avatar" src="./images/cute-cat.jpg" alt="profile pic">
+                    </div>
+                    <div class="user-card content">
+                        <h2 id="username">Krystle Spearing</h2>
+                        <div class="flex-location">
+                            <img class="icon" src="./icons/map-marker.png" alt="map-marker">
+                            <h4>Oklahoma</h4>
+                        </div>
+                        <p>Developer | Engineer | Problem Solver<br>
+                        Cat mom and video game enthusiast!
+                        </p>
+                        <p>
+                            <a onclick="edit()" href="#">
+                                <img class="icon" src="./icons/gear.png" alt="gear">
+                                edit profile
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Education -->
+                <div class="left-box">
+                    <div class="education-header gray-header">
+                        <h3>Education</h3>
+                    </div>
+                    <div class="education-card content">
+                        <h4>Coding Dojo - Full Stack Bootcamp</h4>
+                        <p class="italics">August 2022 - Current<p>
+                        <p>Student programmer studying HTML, CSS, JavaScript, etc...</p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="right-col flex-col">
+                <!-- Connection Requests -->
+                <div class="right-box">
+                    <div class="gray-header right-header">
+                        <p><span id="requests">2</span></p>
+                        <p>Connection Requests</p>
+                    </div>
+                    <div class="content">
+                        <div class="requests flex-row" id="request-1">
+                            <span class="flex-row">
+                                <img class="profile-picture" src="./images/todd-s.jpg" alt="profile picture">
+                                <p>Todd E</p>
+                            </span>
+                            <span class="flex-row requests" id="request-1">
+                                <img class="icon-m" src="./icons/accept-circle.png" alt="accept" onclick='accept("#request-1")'>
+                                <img class="icon-m" src="./icons/close-circle.png" alt="x icon" onclick='decline("#request-1")'>
+                            </span>
+                        </div>
+                        <div class="requests flex-row" id="request-2">
+                            <span class="flex-row" id="request-2">
+                                <img class="profile-picture" src="./images/phil-s.jpg" alt="profile picture">
+                                <p>Phil K</p>
+                            </span>
+                            <span class="flex-row requests">
+                                <img class="icon-m" src="./icons/accept-circle.png" alt="accept" onclick='accept("#request-2")'>
+                                <img class="icon-m" src="./icons/close-circle.png" alt="x icon" onclick='decline("#request-2")'>
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Your Connections -->
+                <div class="right-box">
+                    <div class="gray-header right-header connections-header">
+                        <p id="connections">500</p>
+                        <p>Your Connections</p>
+
+                    </div>
+                    <div class="connections content">
+                        <div class="friend">
+                            <img class="profile-picture" src="./images/adrien-s.jpg" alt="profile picture">
+                            <p>Adrien D</p>
+                        </div>
+                        <div class="friend">
+                            <img class="profile-picture" src="./images/anne-s.jpg" alt="profile picture">
+                            <p>Anne J</p>
+                        </div>
+                        <div class="friend">
+                            <img class="profile-picture" src="./images/alayne-s.jpg" alt="profile picture">
+                            <p>Alayne T</p>
+                        </div>
+                        <div class="friend">
+                            <img class="profile-picture" src="./images/arry-s.jpg" alt="profile picture">
+                            <p>Arry Y</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more content">
+                    <p>
+                        <a href="/">View More</a>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+<script src="scripts.js"></script>
+</body>
+</html>
